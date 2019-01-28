@@ -34,4 +34,23 @@ $("#add").click(function() {
     displaySongInfo();
 });
 
-displaySongInfo();
+function displaySongInfo() {
+    songs.forEach(function(song) {
+        $("#songs").append("<p" + song + "</p>");
+    });
+    image_links.forEach(function(image) {
+        $("#images").append("<img src=" + image + ">");
+    });
+    artists.forEach(function(artist) {
+        $("#artist").append("<p" + artist + "</p>");
+    });
+    song_lengths.forEach(function(length) {
+        $("#length").append("<p" + length + "</p>");
+    });
+    links.forEach(function(videos) {
+        $("#links").append("<p" + videos + "</p>");
+    });
+    release_year.forEach(function(years) {
+        $("#year").append("<p" + years + "</p>");
+    });
+}
