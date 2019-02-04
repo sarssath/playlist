@@ -48,6 +48,13 @@ h1 {
     font-weight: bold;
     margin: 20px;
 }
+#years p {
+    font-size: 16px;
+    height: 100px;
+    margin: 20px;
+    text-align: right;
+}
+
 
 #form {
     width: 75%;

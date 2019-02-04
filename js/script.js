@@ -9,21 +9,26 @@ var artists =["A$AP Mob","Fugees", "Young Thug ft. Jaden Smith", "J. Cole", "Pau
 var song_lengths =["2:55", "4:20", "3:23", "4:25", "2:35", "4:49"];
 var links =["https://www.youtube.com/watch?v=yGy2NIeJZa4", "https://www.youtube.com/watch?v=MPlb9HoOCxs", "https://www.youtube.com/watch?v=eHrGwEypJ2U", "https://www.youtube.com/watch?v=oigcRpBOoZk", "https://www.youtube.com/watch?v=uvxagNIBVLU", "https://www.youtube.com/watch?v=RK8Lf3YyMbY"];
 var release_year =["2017", "1996", "2018", "2016", "1959", "2018"];
-function displaySongInfo(){
-    // BELOW Use forEach Loop to display the data from each of your arrays in the correct div
-
-}
+displaySongInfo();
 
 function emptySongInfo(){
     $("#songs").empty();
-    // Use jQuery to empty all of the remaining divs
-
-
+    $("#images").empty();
+    $("#artists").empty();
+    $("#links").empty();
+    $("#year").empty();
+    $("#lengths").empty();
 }
 
 
 function addSongInfo(){
     // BELOW write the code to add new items to each of the arrays.
+$('#add').click(function() {
+    var newSong = $("#song").val();
+    songs.push(newSong); 
+    var newArtist = $("#artist").val();
+    artists.push(newArtist);
+});
 
 
 }
@@ -36,21 +41,21 @@ $("#add").click(function() {
 
 function displaySongInfo() {
     songs.forEach(function(song) {
-        $("#songs").append("<p" + song + "</p>");
+        $("#songs").append("<p>" + song + "</p>");
     });
     image_links.forEach(function(image) {
         $("#images").append("<img src=" + image + ">");
     });
     artists.forEach(function(artist) {
-        $("#artist").append("<p" + artist + "</p>");
+        $("#artists").append("<p>" + artist + "</p>");
     });
     song_lengths.forEach(function(length) {
-        $("#length").append("<p" + length + "</p>");
+        $("#lengths").append("<p>" + length + "</p>");
     });
-    links.forEach(function(videos) {
-        $("#links").append("<p" + videos + "</p>");
+    links.forEach(function(videolink) {
+        $("#links").append("<a href=" + videolink + ">" +"Listen" + "</a>");
     });
     release_year.forEach(function(years) {
-        $("#year").append("<p" + years + "</p>");
+        $("#years").append("<p>" + years + "</p>");
     });
 }
