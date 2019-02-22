@@ -19,24 +19,7 @@ function emptySongInfo(){
     $("#year").empty();
     $("#lengths").empty();
 }
-
-function addSongInfo(){
-    // BELOW write the code to add new items to each of the arrays.
-$('#add').click(function() {
-    var newSong = $("#song").val();
-    songs.push(newSong); 
-    var newArtist = $("#artist").val();
-    artists.push(newArtist);
-    var newLength = $("#length").val();
-    song_lengths.push(newLength); 
-    var newImage = $("#image").val();
-    image_links.push(newImage);
-    var newLink = $("#link").val();
-    links.push(newLink); 
-    var newYear = $("#year").val();
-    release_year.push(newYear);
-});
-}
+ 
 
 
 function displaySongInfo() {
@@ -59,4 +42,26 @@ function displaySongInfo() {
         $("#years").append("<p>" + years + "</p>");
     });
 }
-displaySongInfo();
+
+function addSongInfo() {
+    var newSong = $("#song").val();
+    songs.push(newSong); 
+    var newArtist = $("#artist").val();
+    artists.push(newArtist);
+    var newLength = $("#length").val();
+    song_lengths.push(newLength); 
+    var newImage = $("#image").val();
+    image_links.push(newImage);
+    var newLink = $("#link").val();
+    links.push(newLink); 
+    var newYear = $("#year").val();
+    release_year.push(newYear);
+    
+    emptySongInfo();
+    displaySongInfo();
+}
+
+$('#add').click(function() {
+    addSongInfo();
+    // BELOW write the code to add new items to each of the arrays.
+});
