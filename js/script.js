@@ -56,12 +56,11 @@ function addSongInfo() {
     links.push(newLink); 
     var newYear = $("#year").val();
     release_year.push(newYear);
-    
-    emptySongInfo();
-    displaySongInfo();
 }
 
 $('#add').click(function() {
+    emptySongInfo();
+    displaySongInfo();
     addSongInfo();
     // BELOW write the code to add new items to each of the arrays.
 });
