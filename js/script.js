@@ -16,7 +16,7 @@ function emptySongInfo(){
     $("#images").empty();
     $("#artists").empty();
     $("#links").empty();
-    $("#year").empty();
+    $("#years").empty();
     $("#lengths").empty();
 }
  

@@ -1,5 +1,13 @@
+body {
+  background-color: #e5f9f4;
+}
 h1 {
     text-align: center;
+     font-family: Times New Roman;
+     font-style: italic;
+}
+#form {
+    font-family: Times New Roman;
 }
 
 #cart {
@@ -7,6 +15,7 @@ h1 {
     justify-content: center;
     border-top: 5px solid black;
     border-bottom: 5px solid black;
+    font-family: Times New Roman;
 }
 
 .column {
